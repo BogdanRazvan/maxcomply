@@ -9,8 +9,10 @@ The design team have created rough mockups of the new task viewer screen. Your t
 ## Tasks
 Implement the assignment using:
   - language: JavaScript
-  - framework: Vue 2
-  - frontend state management: Vuex / Pinia
+  - framework: Vue / React
+  - frontend state management: 
+    - Vue: Pinia
+    - React: coders choice
   - testing libraries: Jest / Mocha / Cyprus
 
 ## Expected Behaviour
@@ -35,6 +37,7 @@ Implement the assignment using:
 - Design and interpretation of mobile view and layout
 - Completeness: Did you complete the features?
 - Correctness: Does the functionality act in sensible, thought-out ways?
+- Creativity: Did you go above and beyond the requirements?
 - Maintainability: Is it written in a clean, maintainable way?
 - Testing: Is the system adequately tested?
 
