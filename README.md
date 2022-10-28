@@ -9,10 +9,9 @@ The design team have created rough mockups of the new task viewer screen. Your t
 ## Tasks
 Implement the assignment using:
   - language: JavaScript
-  - framework: Vue / React
+  - framework: Vue
   - frontend state management: 
     - Vue: Pinia
-    - React: coders choice
   - testing libraries: Jest / Mocha / Cyprus
 
 ## Expected Behaviour
