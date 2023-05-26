@@ -4,16 +4,14 @@
 Using JavaScript and Vue, your assignment is to implement a responsive task viewer component.
 
 ## Brief
-The design team have created rough mockups of the new task viewer screen. Your task is to build out the project using the designs inside the `/design` folder as a guide. You can use any vue component framework to help you complete the challenge. 
+The design team have created rough mockups of the new task viewer screen. Your task is to build out the project using the designs inside the `/design` folder as a guide.
 
-## Tasks
-Implement the assignment using:
-  - language: JavaScript
-  - framework: Vue / React
-  - frontend state management: 
-    - Vue: Pinia
-    - React: coders choice
-  - testing libraries: Jest / Mocha / Cyprus
+## Task
+Provided is the default Quasar created project setup with a pinia plugin setup. Current Vue components can be removed as needed. to complete the task
+- Extend base pinia plugin to allow for POST requests
+- Create task store 
+- Recreate provided screens using Quasar components (Note: use Vue 'script setup' syntax for development: https://vuejs.org/api/sfc-script-setup.html)
+- Provide feedback to user for loading and notifications where necessary
 
 ## Expected Behaviour
 - On initial load, make a call to the backend using the `GET /tasks` endpoint provided and display the response to the user
@@ -28,7 +26,7 @@ Implement the assignment using:
 ## Extra Notes
 - The design is not final you may alter the design as you see fit, to facilitate this you can add content to the mock responses from the backend
 - Feel free to add to the list of behaviour requirements and add in any library usage that you feel could benefit the flow and design
-- Comments on functionality and design decisions to help us understand your thought process would be a benefit
+- Comments on functionality using JSDoc syntax: https://jsdoc.app/
 
 ## Evaluation Criteria
 - JavaScript/Vue best practices
@@ -51,23 +49,40 @@ This project is broken down to 4 separate areas:
 # Delivery
 Please provide a link to a git/bitbucket repository which contains the application code.
 
+# Setup
+## Required packages
+- yarn: https://yarnpkg.com/
+- Quasar CLI: https://quasar.dev/start/quasar-cli
+
+## Backend
+### Install the dependencies
+```bash
+yarn
+```
+
+### Run Backend
+```bash
+node server
+```
+
+
+## Frontend
+### Install the dependencies
+```bash
+yarn
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
+
+### Lint the files
+```bash
+yarn lint
+```
+
 # Contact
 if you encounter any issues or have any questions you can contact:
 - Sam: sam.cosgrove@iqeq.com
 - Seamus : seamus.ohiggins@iqeq.com
-
-# Backend Setup
-## Navigate to Backend Folder
-```
-cd ./backend
-```
-
-## Install NPM Packages
-```
-npm install
-```
-
-## Run Backend
-```
-node server
-```
