@@ -86,7 +86,7 @@ export function BaseStorePlugin(context) {
 
 				console.log(response);
 
-				handleApiSuccess(`${context.store.$id}s retrieved successfully`);
+				return handleApiSuccess(`${context.store.$id}s retrieved successfully`);
 			})
 			.catch(() => {
 				handleApiError(`error getting ${context.store.$id}s`);
@@ -96,6 +96,21 @@ export function BaseStorePlugin(context) {
 			});
 	}
 
+	function setCollection(url, data) {
+		loading.value = true;
+
+		api.post(url, data)
+			.then(async (response) => {
+				await handleApiResponse(response);
+				return handleApiSuccess(`${context.store.$id}s added successfully`);
+			})
+			.catch(() => {
+				handleApiError(`error setting ${context.store.$id}s`);
+			})
+			.finally(() => {
+				loading.value = false;
+			});
+	}
 
 	return {
 		// state
@@ -106,5 +121,6 @@ export function BaseStorePlugin(context) {
 		// actions
 		getItem,
 		getCollection,
+		setCollection,
 	};
 }
