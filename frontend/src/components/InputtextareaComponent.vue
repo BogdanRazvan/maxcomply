@@ -1,0 +1,26 @@
+<template>
+	<div>
+		<span>{{ fields.label }}</span>
+		<q-input
+			v-model="pStore.taskData[props.index]"
+			type="textarea"
+			outlined
+			:rules="[emptyRule, validationRule(pStore.taskData[props.index], fields.validation)]"
+		/>
+	</div>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+const props = defineProps({
+	index: {
+		type: Number,
+		required: true,
+	},
+});
+import { taskStore } from 'src/stores/taskStore.js';
+import { emptyRule, validationRule } from 'src/rules';
+const pStore = taskStore();
+
+const fields = computed(() => pStore.item?.data[0].fields[props.index]);
+</script>
