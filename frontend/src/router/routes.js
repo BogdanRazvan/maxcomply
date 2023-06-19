@@ -1,6 +1,9 @@
 const routes = [
 	{
 		path: '/',
+		redirect: {
+			path: '/1',
+		},
 		component: () => import('layouts/MainLayout.vue'),
 		children: [
 			{
