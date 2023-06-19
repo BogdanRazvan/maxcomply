@@ -1,8 +1,18 @@
 // app global css in SCSS form
 body {
-    font-size: 24px;
+    &.screen--xl, &.screen--lg {
+        font-size: 24px;
+    }
+    &.screen--md, &.screen--sm, &.screen--xs {
+        font-size: 18px;
+    }
 }
 
 .sub-heading {
-    font-size: 20px;
+    &.screen--xl, &.screen--lg {
+        font-size: 20px;
+    }
+    &.screen--md, &.screen--sm, &.screen--xs {
+        font-size: 14px;
+    }
 }

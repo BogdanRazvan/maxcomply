@@ -15,7 +15,7 @@
 			v-model="leftDrawerOpen"
 			show-if-above
 			bordered
-			width="750"
+			:width="drawerSize"
 			class="q-mx-lg"
 		>
 			<q-list>
@@ -34,11 +34,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import EssentialLinkFiltered from 'src/components/EssentialLinkFiltered.vue';
+import { Screen } from 'quasar';
 
 const leftDrawerOpen = ref(false);
 const search = ref('');
+
+const drawerSize = computed(() => Screen.lt.lg ? 350 : 750);
 </script>
 
 <style lang="scss" scoped>

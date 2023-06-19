@@ -41,6 +41,6 @@ pStore.getCollection('http://localhost:3000/tasks/');
 const filteredCollection = computed(() => {
 	return !props.search ?
 		pStore?.collection?.data :
-		pStore?.collection?.data?.filter(item => item.name.toLowerCase().includes(props.search));
+		pStore?.collection?.data?.filter(item => item.name.toLowerCase().includes(props.search.toLowerCase()));
 });
 </script>
