@@ -25,6 +25,7 @@
 			</q-form>
 		</div>
 		<div
+			v-else
 			class="flex justify-center self-center"
 		>
 			<q-spinner-gears
