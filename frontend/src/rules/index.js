@@ -1,8 +1,11 @@
 export const emptyRule = (val) => val && val.length > 0 || 'Please type something';
+export const noFileRule = (val) => {
+	return val && val.length > 0 || 'Please add a file';
+};
 export const emptySelectRule = (val) => !!val?.value || 'Please select something';
 export const validationRule = (val, data) => {
 	let message = '';
-	if (val && +val < data?.min) message = `Please enter a value greater than ${data.min}`;
-	if (val && +val > data?.max) message = `Please enter a value lower than ${data.max}`;
+	if (val && val.length < data?.min) message = `The value should be at least ${data.min} characters long`;
+	if (val && val.length > data?.max) message = `The value should be at most ${data.max} characters long`;
 	return () => message || true;
 };
