@@ -1,7 +1,9 @@
+<!-- eslint-disable vue/no-duplicate-attr-inheritance -->
 <template>
 	<div>
 		<span>{{ fields.label }}</span>
 		<q-input
+			v-bind="$attrs"
 			v-model="pStore.taskData[props.index]"
 			outlined
 			input-class="tall-input"
